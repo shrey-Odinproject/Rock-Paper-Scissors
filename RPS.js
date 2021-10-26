@@ -30,10 +30,6 @@ function singleRound(playerselection, computerselection) {
 
 }
 
-
-
-
-
 function game() {
     player = 0
     comp = 0
