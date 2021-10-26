@@ -29,7 +29,8 @@ function singleRound(playerselection, computerselection) {
     }
 
 }
-
+console.log(singleRound(prompt('entr ur choice'), computerPlay()))
+/*
 function game() {
     player = 0
     comp = 0
@@ -66,3 +67,5 @@ function game() {
 }
 
 console.log(game())
+
+*/
