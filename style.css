@@ -14,7 +14,7 @@ body{
     display: flex;
     justify-content: space-around;
 }
-button{
+.choice{
 font-size: xx-large;
 color: powderblue;
 background:plum;
@@ -47,9 +47,25 @@ transition: all 0.07s ease;
     justify-content: center;
     color: black;
     font-size: xx-large;
+    background: purple;
+    color: yellow;
 }
 .player, .comp{
     background: black;
     color:yellow;
     font-size: xx-large;
+}
+
+.refresh{
+    
+    
+    display: flex;
+    justify-content: center;
+}
+.refresh button{
+    background: palevioletred;
+    color: powderblue;
+    font-size: xx-large;
+    transition: 0.07s ease;
+
 }
