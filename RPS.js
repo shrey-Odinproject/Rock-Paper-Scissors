@@ -16,11 +16,13 @@ const player = document.querySelector('.player') // stores the comp and player d
 const comp = document.querySelector('.comp')// aim is to display score in text contents of these divs
 let pl = 0
 let cp = 0
+player.textContent = ` player : ${pl}`
+comp.textContent = `computer : ${cp}`
 
-const refresh=document.querySelector('.refresh button')// play again button refreshes
-refresh.addEventListener('click',(e)=>{window.location.reload()})
-refresh.addEventListener('mouseover',animateHover)
-refresh.addEventListener('mouseout',animateUnhover)
+const refresh = document.querySelector('.refresh button')// play again button refreshes
+refresh.addEventListener('click', (e) => { window.location.reload() })
+refresh.addEventListener('mouseover', animateHover)
+refresh.addEventListener('mouseout', animateUnhover)
 
 function playOnPress(e) {
     results.textContent = (singleRound(e.target.textContent, computerPlay()))
@@ -34,15 +36,17 @@ function playOnPress(e) {
         player.textContent = ''
         gameOver.textContent = 'YOU WIN'
         comp.textContent = ''
-        results.textContent=''
+        results.textContent = 'PRESS PLAY AGAIN'
+        return
     }
     else if (cp >= 5) {
         player.textContent = ''
         gameOver.textContent = 'COMP WINS'
         comp.textContent = ''
-        results.textContent=''
+        results.textContent = 'PRESS PLAY AGAIN'
+        return
     }
-    
+
 }// function that runs 1 round of rps when we click button
 function animateHover(e) {
     e.target.classList.add('playing')

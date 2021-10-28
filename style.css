@@ -1,10 +1,10 @@
-*{
+body{/* put this img as background*/
     background-image:url('RPS.png') ;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-}/* put this img as background*/
-body{
+    
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,8 +16,8 @@ body{
 }
 .choice{
 font-size: xx-large;
-color: powderblue;
-background:plum;
+color: yellow;
+background:purple;
 border-color: powderblue;
 transition: all 0.07s ease;
 }
@@ -25,14 +25,14 @@ transition: all 0.07s ease;
     transform: scale(1.5);
     border-color: rgb(165, 37, 79);
     box-shadow: 0 0 1rem #d336a4;
-    background: powderblue;
-    color: plum;
+    background: yellow;
+    color: purple;
   }
 
 .announce{
     font-size: xx-large;
-    background:goldenrod;
-    color: purple;
+    background:purple;
+    color: yellow;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,14 +45,13 @@ transition: all 0.07s ease;
     height: 50px;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: purple;
     font-size: xx-large;
-    background: purple;
-    color: yellow;
+    background: yellow;
 }
 .player, .comp{
-    background: black;
-    color:yellow;
+    background: purple;
+    color: yellow;
     font-size: xx-large;
 }
 
@@ -63,8 +62,8 @@ transition: all 0.07s ease;
     justify-content: center;
 }
 .refresh button{
-    background: palevioletred;
-    color: powderblue;
+    background: yellow;
+    color: purple;
     font-size: xx-large;
     transition: 0.07s ease;
 
