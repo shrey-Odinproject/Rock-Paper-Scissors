@@ -4,20 +4,52 @@
     background-attachment: fixed;
     background-size: cover;
 }/* put this img as background*/
-
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+}
 .buttons{
-    margin-top: 50px;
     display: flex;
     justify-content: space-around;
 }
 button{
 font-size: xx-large;
-background:black;
-border-color: cyan;
+color: powderblue;
+background:plum;
+border-color: powderblue;
 transition: all 0.07s ease;
 }
 .playing {
     transform: scale(1.5);
-    border-color: #ffc600;
-    box-shadow: 0 0 1rem #ffc600;
+    border-color: rgb(165, 37, 79);
+    box-shadow: 0 0 1rem #d336a4;
+    background: powderblue;
+    color: plum;
   }
+
+.announce{
+    font-size: xx-large;
+    background:goldenrod;
+    color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: auto;
+    }
+.score{
+    display: flex;
+    gap: 30px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: xx-large;
+}
+.player, .comp{
+    background: black;
+    color:yellow;
+    font-size: xx-large;
+}

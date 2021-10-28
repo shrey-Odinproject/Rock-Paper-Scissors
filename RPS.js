@@ -1,21 +1,48 @@
 // MAKING THE UI PART
 
 const buttons = document.querySelectorAll('button');// nodelist of all button
+const body = document.querySelector('body'); // the <body> tag
 
 function playOnPress(e) {
-    console.log(singleRound(e.target.textContent, computerPlay())) //console.log(e.target.textContent) gives string in the respective button
-}// function that runs when we click
+    results.textContent = (singleRound(e.target.textContent, computerPlay()))
+    if (results.textContent.includes('win')) { ++pl }
+    else if (results.textContent.includes('lost')) { ++cp }
+    else { }
+
+    player.textContent = ` player : ${pl}`
+    comp.textContent = `computer : ${cp}`
+    if (pl === 3) {
+        player.textContent = ''
+        gameOver.textContent = 'YOU WIN'
+        comp.textContent = ''
+    }
+    else if (cp === 3) {
+        player.textContent = ''
+        gameOver.textContent = 'COMP WINS'
+        comp.textContent = ''
+    }
+}// function that runs 1 round of rps when we click
 buttons.forEach(button => button.addEventListener('click', playOnPress))// for all buttons we run event siltner click
 
-function animateHover(e){
+function animateHover(e) {
     e.target.classList.add('playing')
 }
-buttons.forEach(button => button.addEventListener('mouseover',animateHover ))
+buttons.forEach(button => button.addEventListener('mouseover', animateHover))
 
-function animateUnhover(e){
+function animateUnhover(e) {
     e.target.classList.remove('playing')
 }
-buttons.forEach(button => button.addEventListener('mouseout',animateUnhover ))
+buttons.forEach(button => button.addEventListener('mouseout', animateUnhover))
+
+const results = document.createElement('div')
+results.classList.add('announce')
+body.appendChild(results)
+
+const gameOver = document.querySelector('.score')
+const player = document.querySelector('.player') // stores the comp and player divs
+const comp = document.querySelector('.comp')// aim is to display score in text contents of these divs
+let pl = 0
+let cp = 0
 
 
 // returns a random string out of the three
