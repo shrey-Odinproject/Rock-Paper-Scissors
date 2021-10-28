@@ -1,12 +1,24 @@
 // MAKING THE UI PART
-function func(e) {
+
+const buttons = document.querySelectorAll('button');// nodelist of all button
+
+function playOnPress(e) {
     console.log(singleRound(e.target.textContent, computerPlay())) //console.log(e.target.textContent) gives string in the respective button
 }// function that runs when we click
-const buttons = document.querySelectorAll('button');// nodelist of all button
-buttons.forEach(button => button.addEventListener('click', func))// for all buttons we run event siltner click
+buttons.forEach(button => button.addEventListener('click', playOnPress))// for all buttons we run event siltner click
+
+function animateHover(e){
+    e.target.classList.add('playing')
+}
+buttons.forEach(button => button.addEventListener('mouseover',animateHover ))
+
+function animateUnhover(e){
+    e.target.classList.remove('playing')
+}
+buttons.forEach(button => button.addEventListener('mouseout',animateUnhover ))
 
 
-
+// returns a random string out of the three
 function computerPlay() {
     let choices = ['Rock', 'Paper', 'Scissors'];
     let choice = choices[Math.floor(Math.random() * choices.length)];

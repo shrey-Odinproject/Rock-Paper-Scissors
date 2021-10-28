@@ -6,6 +6,7 @@
 }/* put this img as background*/
 
 .buttons{
+    margin-top: 50px;
     display: flex;
     justify-content: space-around;
 }
@@ -13,10 +14,10 @@ button{
 font-size: xx-large;
 background:black;
 border-color: cyan;
-/*transition: all .07s ease;*/
+transition: all 0.07s ease;
 }
-/*.playing {
-    transform: scale(1.1);
+.playing {
+    transform: scale(1.5);
     border-color: #ffc600;
     box-shadow: 0 0 1rem #ffc600;
-  }*/
+  }
